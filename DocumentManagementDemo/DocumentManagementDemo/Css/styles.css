@@ -1,0 +1,309 @@
+﻿/* === AutoHeight === */
+
+html, body, form, .app-content {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 320px;
+    overflow: hidden;
+}
+
+    /* Disable bounce scroll but allow normal scrolling */
+    html.dxMacOSMobilePlatform {
+        position: fixed;
+        width: 100%;
+    }
+
+/* === Page Header === */
+/* ASPxPanel CSS override */
+.dxpnlControl_Office365.dxpnl-edge.app-header-toolbar {
+    background-color: #4a4a4a;
+}
+
+.dxpnlControl_Office365.dxpnl-edge, .dxpnlControl_Office365.dxpnl-edge.dxpnl-bar {
+    padding: 0px;
+}
+
+/* Header Panel Content */
+.app-header-toolbar {
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    height: 42px;
+}
+
+.app-content-wrapper {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.app-header-toolbar .left {
+    float: left;
+}
+
+.app-header-toolbar .right {
+    float: right;
+}
+
+.app-header-toolbar .title {
+    float: none;
+    vertical-align: top;
+    color: white;
+    font: 18px "Segoe UI", Helvetica, "Droid Sans", Tahoma, Geneva, sans-serif;
+    line-height: 41px;
+}
+
+.app-header-toolbar .button {
+    background-color: transparent;
+    padding: 11px 11px;
+}
+
+.app-header-toolbar .title .title-text {
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 8px;
+}
+
+/* === Left Panel === */
+
+.app-left-panel {
+    z-index: 1101 !important;
+    background-color: #FFF;
+    overflow-y:auto;
+}
+
+    .app-left-panel.expanded {
+        top: 0 !important; /* for Mobile */
+    }
+
+
+/* Menu */
+.app-left-panel .filters-menu {
+    padding-top: 0;
+    padding-left: 0;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+    .app-left-panel .filters-menu .menu-separator {
+        display: none;
+    }
+
+.app-left-panel .filters-menu {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+    .app-left-panel .filters-menu .menu-item {
+        padding: 3px 4px;
+    }
+
+        .app-left-panel .filters-menu .menu-item.menu-item-selected, .app-left-panel .filters-menu .menu-item.menu-item-hover {
+            background-color: rgba(248, 124, 29, 0.1) !important;
+            color: #818181;
+        }
+
+            .app-left-panel .filters-menu .menu-item.menu-item-selected .menu-item-text, .app-left-panel .filters-menu .menu-item.menu-item-hover .menu-item-text {
+                color: #818181;
+            }
+
+/* Shadow */
+.app-left-panel {
+    border-right: 1px solid #f0f0f0;
+    box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.23);
+}
+
+/* == FileManager == */
+
+/* Remove top toolbar border */
+.file-manager .dxsplHSeparator_Office365 {
+    background-color: transparent;
+}
+
+/* Breadcrumbs customization */
+.file-manager .fm-breadcrumbs .dxsplLCC {
+    padding-bottom: 12px;
+}
+
+.file-manager .fm-breadcrumbs .dxfm-bcContainer {
+    padding-bottom: 19px;
+}
+
+    .file-manager .fm-breadcrumbs .dxfm-bcContainer.dxfm-bcRoot .fm-breadcrumbs-item {
+        font-family: "Segoe UI Light", "Segoe UI", Helvetica, "Droid Sans", Tahoma, Geneva, sans-serif;
+        font-size: 28px;
+    }
+
+.file-manager .fm-breadcrumbs .fm-breadcrumbs-item {
+    font-size: 17px;
+    line-height: 24px;
+    color: #666666;
+}
+
+    .file-manager .fm-breadcrumbs .fm-breadcrumbs-item.dxfm-bcItemH {
+        background-color: rgba(248, 124, 29, 0.1);
+        color: #666666;
+    }
+
+    .file-manager .fm-breadcrumbs .fm-breadcrumbs-item:not(.dxfm-bcButton) ~ .fm-breadcrumbs-item.dxfm-bcLastItem {
+        color: #999999;
+    }
+
+/* Items etc */
+
+.file-manager .fm-item-list .dxsplLCC {
+    overflow-x: hidden !important;
+}
+
+.file-manager .fm-item-list .dxgvHSDC,
+.file-manager .fm-item-list .dxgvCSD {
+    border-width: 0;
+}
+
+.file-manager .fm-item-list td.fm-header {
+    font: 12px "Segoe UI", Helvetica, "Droid Sans", Tahoma, Geneva, sans-serif;
+    line-height: 24px;
+    color: #999999;
+    border-right-width: 0;
+    padding: 8px 10px 7px;
+}
+
+    .file-manager .fm-item-list td.fm-header.fm-cmd-header {
+        padding-left: 9px;
+    }
+
+        .file-manager .fm-item-list td.fm-header.fm-cmd-header table > tbody > tr > td {
+            text-align: left;
+        }
+
+    .file-manager .fm-item-list td.fm-header.fm-thumb-header {
+        padding-top: 11px;
+        text-align: center;
+    }
+
+    /* Selection check in Header */
+    .file-manager .fm-item-list td.fm-header .dxichSys {
+        opacity: 0.25;
+    }
+
+    .file-manager .fm-item-list td.fm-header:hover .dxichSys {
+        visibility: visible !important;
+    }
+
+.file-manager .fm-item-list .fm-item {
+    color: #666666;
+}
+
+    .file-manager .fm-item-list .fm-item td.dxgv {
+        border-width: 0 !important;
+        border-bottom-width: 1px !important;
+    }
+
+    .file-manager .fm-item-list .fm-item .fm-check-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Selection check in Rows */
+    .file-manager .fm-item-list .fm-item .dxichSys {
+        opacity: 0.25;
+    }
+
+    .file-manager .fm-item-list .fm-item.fm-item-sel-act .dxichSys, .file-manager .fm-item-list .fm-item.fm-item-sel-inact .dxichSys, .file-manager .fm-item-list .fm-item.fm-item-focused .dxichSys {
+        opacity: 1;
+    }
+
+    .file-manager .fm-item-list .fm-item.fm-item-sel-act, .file-manager .fm-item-list .fm-item.fm-item-sel-inact {
+        background-color: rgba(248, 124, 29, 0.1);
+    }
+
+    .file-manager .fm-item-list .fm-item.fm-item-focused {
+        color: #666666;
+        background-color: rgba(192, 192, 192, 0.08);
+    }
+
+/* == FileManager Item Template == */
+
+.file-manager .fm-location {
+    display: none;
+}
+
+.file-manager.filtered .fm-location {
+    font-size: 10px;
+    opacity: 0.5;
+    display: block;
+}
+
+.file-manager .templateItem {
+    color: #666 !important;
+}
+
+
+/* == Documents == */
+.app-header-toolbar .centered {
+    text-align: center;
+}
+
+/* == ViewMode Viewer == */
+.viewer-wrapper {
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling for iOS */
+}
+
+@media (min-width: 601px) {
+    .viewer-wrapper {
+        padding: 15px 0;
+    }
+}
+
+.viewer {
+    box-sizing: border-box;
+    min-height: 100%;
+    max-width: 816px;
+    margin: 0px auto;
+    padding: 24px;
+    word-wrap: break-word;
+}
+
+@media (min-width: 816px) {
+    .viewer {
+        padding: 48px;
+        border: 1px solid #C0C0C0;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* View mode - hack for tables and embedded images with width > container */
+.viewer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.viewer table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* === Special for Mobile devices  === */
+@media (max-width: 600px) {
+    /* FileManager "Files" Title - decrease padding for Mobile */
+    .file-manager .fm-breadcrumbs .dxfm-bcContainer {
+        padding-bottom: 0px !important;
+    }
+}
+
+/* Common */
+*:focus {
+    outline: none;
+}

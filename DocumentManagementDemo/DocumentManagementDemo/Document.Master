@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Document.master.cs" Inherits="DocumentManagementDemo.Document" %>
+
+<%@ Register Assembly="DevExpress.Web.v18.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Css/styles.css?v=1" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <dx:ASPxPanel runat="server" ID="HeaderPanel" ClientInstanceName="headerPanel" FixedPosition="WindowTop"
+            FixedPositionOverlap="true" CssClass="app-header-toolbar">
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                    <div class="left">
+                        <dx:ASPxHyperLink runat="server" ImageUrl="~/Images/back-button.svg" ID="DocumentBackLink"
+                            NavigateUrl="~/Default.aspx" Width="20px" Height="20px" CssClass="button">
+                        </dx:ASPxHyperLink>
+                    </div>
+                    <div class="right">
+                        <dx:ASPxHyperLink runat="server" ImageUrl="~/Images/edit.svg" ID="DocumentEditLink"
+                            NavigateUrl="RichEdit.aspx" Width="20px" Height="20px" CssClass="button">
+                        </dx:ASPxHyperLink>
+                    </div>
+                    <div class="title centered">
+                        <span class="title-text" runat="server" id="DocumentTitle">Document Name</span>
+                    </div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+        <div class="app-content">
+            <div class="app-content-wrapper">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
