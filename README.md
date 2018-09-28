@@ -4,7 +4,7 @@ This repository stores a project that demonstrates best practices of using the D
 
 You can download this repository and run it on your machine, click the QR code below to open the [online example](https://codecentral.devexpress.com/141286477/), or scan the code to execute the demo application on your mobile device. You will need to have DevExpress ASP.NET controls installed in order to load and compile the solution. You can download the installer from the [DevExpress website](https://devexpress.com).
 
-[![QRCode](https://chart.googleapis.com/chart?chs=120x120&cht=qr&chld=L|0&chl=https://codecentral.devexpress.com/141286477/)](https://codecentral.devexpress.com/141286477/)
+[![QRCode](http://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=250x250&chl=https://demos.devexpress.com/BestPractices/DocumentManagementDemo/)](https://demos.devexpress.com/BestPractices/DocumentManagementDemo/)
 
 This README file describes the functionality of the web application stored in this repository. You also can refer to [topics](#conceptual-topics) listed at the end of this README. These topics describe the application's features and how they were implemented with comments to the source code. 
 
