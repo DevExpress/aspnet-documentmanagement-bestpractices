@@ -2,9 +2,11 @@
 
 This repository stores a project that demonstrates best practices of using the DevExpress ASP.NET [File Manager](https://docs.devexpress.com/AspNet/14829/asp.net-webforms-controls/file-management), [Panel](https://docs.devexpress.com/AspNet/14778/asp.net-webforms-controls/site-navigation-and-layout/panel-overview),  [Spreadsheet](https://docs.devexpress.com/AspNet/16157/asp.net-webforms-controls/spreadsheet), and [Rich Text Editor](https://docs.devexpress.com/AspNet/17721/asp.net-webforms-controls/rich-text-editor). These controls are used to implement a responsive web application for managing office documents and media files (*.docx, *.xlsx, *.jpg, etc.).
 
-You can download this repository and run it on your machine, click the QR code below to open the [online demo](https://demos.devexpress.com/BestPractices/DocumentManagementDemo/), or scan the code to execute the demo application on your mobile device. You will need to have DevExpress ASP.NET controls installed starting from **18.1** version in order to load and compile the solution. You can download the installer from the [DevExpress website](https://devexpress.com).
+Click or scan the QR code below to open the [online example](https://demos.devexpress.com/BestPractices/DocumentManagementDemo/) and experience the demo on your desktop or your mobile device.
 
 [![QRCode](http://chart.apis.google.com/chart?choe=UTF-8&chld=H&cht=qr&chs=250x250&chl=https://demos.devexpress.com/BestPractices/DocumentManagementDemo/)](https://demos.devexpress.com/BestPractices/DocumentManagementDemo/)
+
+Download this repository and run it on your machine (details below). This sample app requires DevExpress ASP.NET controls (v18.1 or higher). Download the latest installer from the <a href="https://devexpress.com/" target="_blank">DevExpress website</a>.
 
 This README file describes the functionality of the web application stored in this repository. You also can refer to [topics](#conceptual-topics) listed at the end of this README. These topics describe the application's features and how they were implemented with comments to the source code. 
 
@@ -34,11 +36,11 @@ End-users can view and edit office documents (xlsx, xls, csv, docx, doc, rtf, an
 
 This mode is adapted for viewing documents, especially on mobile devices:
 
-- The page's render is faster than in the edit mode;
-- Readability for different devices because of the adaptive layout;
-- Easy navigation through documents on mobile devices using the browser's built-in search on the page.
+- Pages render faster than in edit mode
+- Improved readability for different devices, due to the adaptive layout
+- Easy navigation through documents on mobile devices using the browser's built-in page search
 
-End-users can to return to the file explorer or edit the document using navigation buttons. When users click the pen button, the document is opened in edit mode office documents in the [ASPxRichEdit](https://docs.devexpress.com/AspNet/17723/asp.net-webforms-controls/rich-text-editor/product-information/main-features) or [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/16159/asp.net-webforms-controls/spreadsheet/product-information/main-features) controls according to the document's format.
+End-users can to return to the file explorer or edit the document using the navigation buttons. When an end-user clicks the pen button then the document is opened in edit mode. Office documents are then either loaded in the [ASPxRichEdit](https://docs.devexpress.com/AspNet/17723/asp.net-webforms-controls/rich-text-editor/product-information/main-features) or [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/16159/asp.net-webforms-controls/spreadsheet/product-information/main-features) controls depending on their format (docx, xlsx, etc.).
 
 ![EditingView](/img/EditingView.png)
 
@@ -46,24 +48,20 @@ End-users can edit and save documents in this mode. The back button returns user
 
 ## How to launch the project on a local machine
 
+The following steps are required to create a database that stores files contained in the [AppData/Files](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/tree/master/DocumentManagementDemo/DocumentManagementDemo/App_Data/Files) folder. These files in the new database are then used to display in the file explorer. Refer to the [Populating the File Manager with files using a database as a file storage](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/tree/master/Database.md) topic to see this feature's description.
+
 Follow the instructions below to launch the project on your machine:
 
 1. Run the **CreateDatabase.aspx** page in your browser.
 2. Click the **Create and populate Database** button. 
 3. Wait until the button's text is changed to **Database created**.
-4. Run the **Default.aspx** to execute the application.
-
-These steps are required to create a database that stores files contained in the [AppData/Files](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/tree/web-forms/DocumentManagementDemo/DocumentManagementDemo/App_Data/Files) folder. The database stores files displayed in the file explorer. Refer to the [Populating the File Manager with files using a database as a file storage](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/Database.md) topic to see this feature's description.
+4. Now run the **Default.aspx** page and experience the sample application.
 
 ## Conceptual topics
   
 The following topics describe how this application was implemented.
 
-- **Step 1**: [Populating the File Manager with files using a database as a file storage](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/Database.md)
-- **Step 2**: [Implementing custom filtering and applying security settings for the File Manager](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/FileManager.md)
-- **Step 3**: [Building a responsive layout for the file explorer using DevExpress controls and CSS styles](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/Layout.md)
-- **Step 4**: [Reading and viewing office documents using Rich Text Editor and Spreadsheet controls](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/OfficeDocs.md)
-
-## First Step
-
-**Step 1**: [Populating the File Manager with files using a database as a file storage](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/Database.md)
+- **Step 1**: [Populating the File Manager with files using a database as a file storage](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/Database.md)
+- **Step 2**: [Implementing custom filtering and applying security settings for the File Manager](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/FileManager.md)
+- **Step 3**: [Building a responsive layout for the file explorer using DevExpress controls and CSS styles](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/Layout.md)
+- **Step 4**: [Reading and viewing office documents using Rich Text Editor and Spreadsheet controls](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/OfficeDocs.md)
