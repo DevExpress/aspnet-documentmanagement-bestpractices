@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="DocumentManagementDemo.Global_asax" Language="C#" %>
