@@ -11,7 +11,7 @@ This article describes how to implement the following features for the [ASPxFile
 
 The ASPxFileManager control allows end-users to filter files by name in the right top corner of the control.  
  
-However, there are many scenarios in which it is required to display documents filtered by custom criteria. This application allows users to display documents that were modified recently or display worksheets/text documents/images/pdfs only. These scenarios are implemented using the [ASPxFileManager](https://docs.devexpress.com/AspNet/9030/asp.net-webforms-controls/file-management/file-manager/aspxfilemanager-overview)'s [file system provider](https://docs.devexpress.com/AspNet/9905/asp.net-webforms-controls/file-management/file-manager/concepts/file-system-providers/file-system-providers-overview) that is stored in the [Code/DocumentsFileSystemProvider.cs](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/DocumentManagementDemo/DocumentManagementDemo/Code/DocumentsFileSystemProvider.cs) file:
+However, there are many scenarios in which it is required to display documents filtered by custom criteria. This application allows users to display documents that were modified recently or display worksheets/text documents/images/pdfs only. These scenarios are implemented using the [ASPxFileManager](https://docs.devexpress.com/AspNet/9030/asp.net-webforms-controls/file-management/file-manager/aspxfilemanager-overview)'s [file system provider](https://docs.devexpress.com/AspNet/9905/asp.net-webforms-controls/file-management/file-manager/concepts/file-system-providers/file-system-providers-overview) that is stored in the [Code/DocumentsFileSystemProvider.cs](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/DocumentManagementDemo/DocumentManagementDemo/Code/DocumentsFileSystemProvider.cs) file:
 
 ```cs
 public override void GetFilteredItems(FileManagerGetFilteredItemsArgs args) {
@@ -44,9 +44,9 @@ IEnumerable<FileManagerItem> GetItemsByFilter(string filterName, string filterBo
 }
 ```
 
-This code provides interface for filtering and does not operate with a data source and data. The [GetFilteredItems](https://docs.devexpress.com/AspNet/DevExpress.Web.FileSystemProviderBase.GetFilteredItems(DevExpress.Web.FileManagerGetFilteredItemsArgs)) method's overload allows you to implement a function for receiving a collection of files that matches the filter criteria. The *GetItemsByFilter* method calls methods stored in the [Code/DataProvider.cs](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/DocumentManagementDemo/DocumentManagementDemo/Code/DataProvider.cs) file that operate with a data source. These methods are marked by the *Filtering* `#region`.
+This code provides interface for filtering and does not operate with a data source and data. The [GetFilteredItems](https://docs.devexpress.com/AspNet/DevExpress.Web.FileSystemProviderBase.GetFilteredItems(DevExpress.Web.FileManagerGetFilteredItemsArgs)) method's overload allows you to implement a function for receiving a collection of files that matches the filter criteria. The *GetItemsByFilter* method calls methods stored in the [Code/DataProvider.cs](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/DocumentManagementDemo/DocumentManagementDemo/Code/DataProvider.cs) file that operate with a data source. These methods are marked by the *Filtering* `#region`.
 
-The [Code/DataProvider.cs](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/DocumentManagementDemo/DocumentManagementDemo/Code/DataProvider.cs) file also contains structures required for filtering by the file extension and the number of recently modified documents received from the data source.
+The [Code/DataProvider.cs](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/DocumentManagementDemo/DocumentManagementDemo/Code/DataProvider.cs) file also contains structures required for filtering by the file extension and the number of recently modified documents received from the data source.
 
 ```cs
     readonly string[] TextDocsExtensions = new[] { ".rtf", ".doc", ".docx", ".txt" };
@@ -56,7 +56,7 @@ The [Code/DataProvider.cs](https://github.com/DevExpress/aspnet-documentmanageme
     readonly int RecentDocCount = 10;
 ```
 
-In conjunction with the code that implements the filtering feature, end-users require a UI that allows them to select the filter's options. In this solution, the left-side collapsible menu provides the UI to display the filter's options. Refer to [Building responsive layout for the file explorer using DevExpress controls and CSS styling](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/Layout.md) topic to learn how to implement collapsible menu using DevExpress ASP.NET controls. 
+In conjunction with the code that implements the filtering feature, end-users require a UI that allows them to select the filter's options. In this solution, the left-side collapsible menu provides the UI to display the filter's options. Refer to [Building responsive layout for the file explorer using DevExpress controls and CSS styling](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/Layout.md) topic to learn how to implement collapsible menu using DevExpress ASP.NET controls. 
 
 ### Displaying filtered files' location
 
@@ -189,7 +189,7 @@ The File Manager control provides an ability to upload files in the application'
 
 - Errors caused by files with unsecured extensions.
 
-To avoid these issues, you can limit the uploaded files' size and define the list of authorized extensions using the ASPxFileManager control's settings in the [Default.aspx](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/DocumentManagementDemo/DocumentManagementDemo/Default.aspx) file. 
+To avoid these issues, you can limit the uploaded files' size and define the list of authorized extensions using the ASPxFileManager control's settings in the [Default.aspx](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/DocumentManagementDemo/DocumentManagementDemo/Default.aspx) file. 
 
 ```html
 <dx:ASPxFileManager ID="fileManager" runat="server">
@@ -211,4 +211,4 @@ To avoid these issues, you can limit the uploaded files' size and define the lis
 See the [ASP.NET Security Best Practices](https://github.com/DevExpress/aspnet-security-bestpractices) repository for information about best practices that you should follow when you develop your applications to avoid introducing any security breaches.
 
 ## Next Step
-**Step 3**: [Building responsive layout for the file explorer using DevExpress controls and CSS styling](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/Layout.md)
+**Step 3**: [Building responsive layout for the file explorer using DevExpress controls and CSS styling](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/Layout.md)
