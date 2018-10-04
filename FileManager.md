@@ -1,4 +1,4 @@
-# Step 2: Implementing custom filtering and applying security settings for the File Manager
+# Step 2: Implement custom filtering and apply security settings for the File Manager
 
 This article describes how to implement the following features for the [ASPxFileManager control](https://docs.devexpress.com/AspNet/9030/asp.net-webforms-controls/file-management/file-manager/aspxfilemanager-overview):
 
