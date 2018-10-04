@@ -38,7 +38,7 @@ The file explorer's items can be a file or folder that stores other files and fo
 
 The *ParentItem* field refers to the current item's parent folder (for folders and files both). The root folder does not have the parent folder; its *ParentItem* field returns **null**. The *IsFolder* bool field indicates whether the current item is a folder or a file.
 
-The file's content is stored in the *Content* field that is represented by the *DocumentBinaryContentItems* model. 
+The file's content is stored in a separate table. *Content* field is the link that is represented by the *DocumentBinaryContentItems* model.
 
 ```csharp
 public class DocumentBinaryContentItem {
