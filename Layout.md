@@ -409,4 +409,4 @@ The CSS rule below allows you to enable this scrolling for a web page's elements
 
 ## Next Step
 
-**Step 4**: [Reading and viewing office text documents using Rich Text Editor and Spreadsheet controls](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/web-forms/OfficeDocs.md)
+**Step 4**: [Reading and viewing office text documents using Rich Text Editor and Spreadsheet controls](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/OfficeDocs.md)
