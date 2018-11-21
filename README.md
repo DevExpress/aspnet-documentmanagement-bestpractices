@@ -65,3 +65,4 @@ The following topics describe how this application was implemented.
 - **Step 2**: [Implementing custom filtering and applying security settings for the File Manager](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/FileManager.md)
 - **Step 3**: [Building a responsive layout for the file explorer using DevExpress controls and CSS styles](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/Layout.md)
 - **Step 4**: [Reading and viewing office documents using Rich Text Editor and Spreadsheet controls](https://github.com/DevExpress/aspnet-documentmanagement-bestpractices/blob/master/OfficeDocs.md)
+![Analytics](https://ga-beacon.appspot.com/UA-129603086-2/aspnet-documentmanagement-bestpractices?pixel)
